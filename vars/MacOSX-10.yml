@@ -6,4 +6,4 @@ __postgresql_config_path: "/usr/local/var/postgresql@{{ __postgresql_version }}"
 __postgresql_daemon: postgresql
 __postgresql_packages:
   - "postgresql@{{ __postgresql_version }}"
-postgresql_python_library: psycopg2
+postgresql_python_library: psycopg2-binary
