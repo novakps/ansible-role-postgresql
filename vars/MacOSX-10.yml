@@ -5,5 +5,5 @@ __postgresql_bin_path: "/usr/local/opt/postgresql/{{ __postgresql_version }}/bin
 __postgresql_config_path: "/usr/local/var/postgresql@{{ __postgresql_version }}"
 __postgresql_daemon: postgresql
 __postgresql_packages:
-  - "postgresql{{ __postgresql_version }}"
+  - "postgresql@{{ __postgresql_version }}"
 postgresql_python_library: psycopg2
