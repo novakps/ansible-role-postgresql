@@ -16,7 +16,7 @@
 
 - name: Include OS-specific variables (MacOSX).
   include_vars: "{{ ansible_distribution }}-{{ ansible_distribution_version.split('.')[0] }}.yml"
-  when: ansible_os_distribution == "MacOSX"
+  when: ansible_distribution == "MacOSX"
 
 - name: Define postgresql_packages.
   set_fact:
