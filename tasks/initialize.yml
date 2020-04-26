@@ -5,8 +5,9 @@
     dest: /etc/profile.d/postgres.sh
     mode: 0644
   notify: restart postgresql
+  when: ansible_distribution != 'MacOSx'
 
-- name: Ensure PostgreSQL data directory exists.
+- name:  Ensure PostgreSQL data directory exists.
   file:
     path: "{{ postgresql_data_dir }}"
     owner: "{{ postgresql_user }}"
