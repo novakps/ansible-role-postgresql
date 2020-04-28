@@ -50,7 +50,7 @@ postgresql_databases: []
 
 # Users to ensure exist.
 postgresql_users: []
- - name: {{ ansible_user_id }}
+ - name: "{{ ansible_user_id }}"
 #   password: # defaults to not set
 #   encrypted: # defaults to not set
 #   priv: # defaults to not set
