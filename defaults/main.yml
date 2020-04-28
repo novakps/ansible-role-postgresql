@@ -49,8 +49,8 @@ postgresql_databases: []
 #   state: # defaults to 'present'
 
 # Users to ensure exist.
-postgresql_users: []
- - name: "{{ ansible_user_id }}"
+postgresql_users:
+ - {name: "{{ ansible_user_id }}"}
 #   password: # defaults to not set
 #   encrypted: # defaults to not set
 #   priv: # defaults to not set
