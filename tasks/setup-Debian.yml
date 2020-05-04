@@ -1,11 +1,11 @@
 ---
 - name: Ensure PostgreSQL Python libraries are installed.
-  homebrew:
+  apt:
     name: "{{ postgresql_python_library }}"
     state: present
 
 - name: Ensure PostgreSQL packages are installed.
-  homebrew:
+  apt:
     name: "{{ postgresql_packages }}"
     state: present
 
@@ -15,3 +15,7 @@
   register: locale_gen_result
 
 - name: Force-restart PostgreSQL after new locales are generated.
+  service:
+    name: "{{ postgresql_daemon }}"
+    state: restarted
+  when: locale_gen_result.changed

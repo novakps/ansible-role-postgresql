@@ -14,6 +14,7 @@
     group: "{{ postgresql_group }}"
     state: directory
     mode: 0700
+  when: ansible_os_family != 'Darwin'
 
 - name: Check if PostgreSQL database is initialized.
   stat:
