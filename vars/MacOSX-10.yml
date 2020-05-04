@@ -7,5 +7,5 @@ __postgresql_daemon: postgresql
 __postgresql_packages:
   - "postgresql@{{ __postgresql_version }}"
 postgresql_python_library: psycopg2-binary
-postgresql_user: {{ ansible_user }}
+postgresql_user: "{{ ansible_user }}"
 postgresql_group: staff
