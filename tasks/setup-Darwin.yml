@@ -10,5 +10,5 @@
     name: "{{ postgresql_packages }}"
     state: present
 
-- name: Force-restart PostgreSQL
+- name: ensure PostgreSQL started and enabled on boot
   command: brew services start postgresql@10
