@@ -2,7 +2,6 @@
 - name: Ensure PostgreSQL Python libraries are installed.
   pip:
     name: "{{ postgresql_python_library }}"
-    executable: pip3.7
     state: present
 
 - name: Ensure PostgreSQL packages are installed.
